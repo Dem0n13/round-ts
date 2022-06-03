@@ -2,30 +2,30 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.round = exports.floor = exports.ceil = void 0;
 /**
- * Returns the smallest integer greater than or equal to its numeric argument.
- * @param value A numeric expression.
- * @param precision A number of significant digits. Can be negative.
- * @returns The smallest integer greater than or equal to the given number.
+ * Returns the smallest number of provided precision greater than or equal to its numeric argument.
+ * @param {number} value The value to be rounded.
+ * @param {number} [precision=0] A number of significant digits. Must be integer. Can be negative.
+ * @returns {number} The smallest number of provided precision greater than or equal to the given number.
  */
 function ceil(value, precision = 0) {
     return decimalAdjust(value, precision, "ceil");
 }
 exports.ceil = ceil;
 /**
- * Returns the greatest integer less than or equal to its numeric argument.
- * @param value A numeric expression.
- * @param precision A number of significant digits. Can be negative.
- * @returns A number representing the largest integer less than or equal to the specified number.
+ * Returns the greatest number of provided precision less than or equal to its numeric argument.
+ * @param {number} value The value to be rounded.
+ * @param {number} [precision=0] A number of significant digits. Must be integer. Can be negative.
+ * @returns {number} The largest number of provided precision less than or equal to the specified number.
  */
 function floor(value, precision = 0) {
     return decimalAdjust(value, precision, "floor");
 }
 exports.floor = floor;
 /**
- * Returns a supplied numeric expression rounded to the nearest integer.
- * @param value The value to be rounded to the nearest integer.
- * @param precision A number of significant digits. Can be negative.
- * @returns The value of the given number rounded to the nearest integer.
+ * Returns a supplied numeric expression rounded to the nearest number of provided precision.
+ * @param {number} value The value to be rounded to the nearest integer.
+ * @param {number} [precision=0] A number of significant digits. Must be integer.    Can be negative.
+ * @returns {number} The value of the given number rounded to the nearest number of provided precision.
  */
 function round(value, precision = 0) {
     return decimalAdjust(value, precision, "round");
@@ -44,3 +44,4 @@ function decimalAdjust(value, precision, method) {
     }
     return Math[method](value);
 }
+// https://itnext.io/step-by-step-building-and-publishing-an-npm-typescript-package-44fe7164964c

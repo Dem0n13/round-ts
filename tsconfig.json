@@ -4,5 +4,12 @@
         "module": "commonjs",
         "strict": true,
         "declaration": true
-    }
+    },
+    "include": [
+        "*"
+    ],
+    "exclude": [
+        "node_modules",
+        "**spec**"
+    ]
 }

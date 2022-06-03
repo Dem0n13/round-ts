@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "Correctly round values to specified precision with TypeScript",
   "main": "index.js",
+  "files": ["index.js", "index.d.ts"],
   "scripts": {
     "build": "tsc",
-    "test": "jest --config jestconfig.json"
+    "test": "jest --config jestconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test"
   },
   "repository": {
     "type": "git",

@@ -7,8 +7,8 @@ Inspired by the packages:
 - [`round-precision`](https://www.npmjs.com/package/round-precision) - bad accurancy, no ts, no negative precision
 - [`round`](https://www.npmjs.com/package/round) - uses `round-precision`
 - [`round10`](https://www.npmjs.com/package/round10) - good accurancy, no ts
-- [round-floor-ceil](https://www.npmjs.com/package/round-floor-ceil) - good accurancy, no ts
-- [lodash.round](https://www.npmjs.com/package/lodash.round) - good implementation, but [contains many compability utils](https://github.com/lodash/lodash/blob/npm-packages/lodash.round/index.js)
+- [`round-floor-ceil`](https://www.npmjs.com/package/round-floor-ceil) - good accurancy, no ts
+- [`lodash.round`](https://www.npmjs.com/package/lodash.round) - good implementation, but [contains many compability utils](https://github.com/lodash/lodash/blob/npm-packages/lodash.round/index.js)
 
 ## Install
 

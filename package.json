@@ -1,0 +1,34 @@
+{
+  "name": "round-ts",
+  "version": "1.0.0",
+  "description": "Correctly round values to specified precision with TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --config jestconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dem0n13/round-ts.git"
+  },
+  "keywords": [
+    "round",
+    "ceil",
+    "floor",
+    "precision",
+    "math",
+    "number",
+    "typescript"
+  ],
+  "author": "Dmitry Statsenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dem0n13/round-ts/issues"
+  },
+  "homepage": "https://github.com/dem0n13/round-ts#readme",
+  "devDependencies": {
+    "@types/jest": "^28.1.0",
+    "ts-jest": "^28.0.4",
+    "typescript": "^4.7.2"
+  }
+}

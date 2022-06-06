@@ -1,6 +1,6 @@
 {
   "name": "round-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Correctly round values to specified precision with TypeScript",
   "main": "index.js",
   "files": ["index.js", "index.d.ts"],

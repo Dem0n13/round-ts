@@ -2,13 +2,19 @@
 
 > Correctly round values to specified precision with TypeScript
 
+Key Features
+- TypeScript written
+- no dependencies (TypeScript is the only dev-dependency)
+- uses the best-known rounding algorithm (solves common problems with incorrect results) and simple implemetation
+- 3 methods: ceil, floor and round with the similar behavior to Math.xxx methods
+
 Inspired by the packages:
-- [`round-tofixed`](https://www.npmjs.com/package/round-tofixed) - good accurancy, no ts, no negative precision
-- [`round-precision`](https://www.npmjs.com/package/round-precision) - bad accurancy, no ts, no negative precision
+- [`round-tofixed`](https://www.npmjs.com/package/round-tofixed) - good accuracy, no TypeScript, no negative precision
+- [`round-precision`](https://www.npmjs.com/package/round-precision) - bad accuracy, no TypeScript, no negative precision
 - [`round`](https://www.npmjs.com/package/round) - uses `round-precision`
-- [`round10`](https://www.npmjs.com/package/round10) - good accurancy, no ts
-- [`round-floor-ceil`](https://www.npmjs.com/package/round-floor-ceil) - good accurancy, no ts
-- [`lodash.round`](https://www.npmjs.com/package/lodash.round) - good implementation, but [contains many compability utils](https://github.com/lodash/lodash/blob/npm-packages/lodash.round/index.js)
+- [`round10`](https://www.npmjs.com/package/round10) - good accuracy, no TypeScript
+- [`round-floor-ceil`](https://www.npmjs.com/package/round-floor-ceil) - good accuracy, no TypeScript
+- [`lodash.round`](https://www.npmjs.com/package/lodash.round) - good implementation, but [contains many compatibility utils](https://github.com/lodash/lodash/blob/npm-packages/lodash.round/index.js)
 
 ## Install
 

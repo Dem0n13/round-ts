@@ -50,6 +50,7 @@ const specs: Test[] = [
     { value: 1.444, precision: 2, ceil: 1.45, floor: 1.44, round: 1.44 },
     { value: 1.544, precision: 2, ceil: 1.55, floor: 1.54, round: 1.54 },
     { value: 4.005, precision: 2, ceil: 4.01, floor: 4, round: 4.01 },
+    { value: 1.123, precision: 2.1, ceil: 1.13, floor: 1.12, round: 1.12 },
     { value: NaN, ceil: NaN, floor: NaN, round: NaN },
     { value: Infinity, ceil: Infinity, floor: Infinity, round: Infinity },
     { value: -Infinity, ceil: -Infinity, floor: -Infinity, round: -Infinity },
@@ -60,13 +61,14 @@ const specs: Test[] = [
     { value: true, ceil: 1, floor: 1, round: 1 },
     { value: '', ceil: 0, floor: 0, round: 0 },
     { value: [], ceil: 0, floor: 0, round: 0 },
-    { value: {}, ceil: NaN, floor: NaN, round: NaN }
+    { value: {}, ceil: NaN, floor: NaN, round: NaN },
+    { value: 1.1, precision: NaN, ceil: 2, floor: 1, round: 1 },
+    { value: NaN, precision: NaN, ceil: NaN, floor: NaN, round: NaN }
 ]
 
 for (const spec of specs) {
     const { value, precision } = spec
     test(`Rounding value ${value} to precision ${precision}`, () => {
-        console.log(ceil(value, precision), floor(value, precision), round(value, precision))
         expect(ceil(value, precision)).toEqual(spec.ceil)
         expect(floor(value, precision)).toEqual(spec.floor)
         expect(round(value, precision)).toEqual(spec.round)

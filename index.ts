@@ -31,15 +31,14 @@ export function round(value: number, precision = 0) {
 const MAX_SAFE_PRECISION = 292 // the max precision for Number.MAX_SAFE_INTEGER before hitting NaN
 
 function decimalAdjust(value: number, precision: number, method: "round" | "ceil" | "floor") {
-    value = Number(value)
-    precision = Number(precision)
-    if (Number.isFinite(value) && Number.isInteger(precision)) {
+    value = +value // finite number, NaN, Infinity, -Infinity
+    precision = Math.trunc(precision) // integer, NaN, Infinity, -Infinity
+    if (Number.isFinite(value) && Number.isFinite(precision)) {
         precision = Math.min(precision, MAX_SAFE_PRECISION) 
         const [valueMantissa, valueExponent] = value.toExponential().split('e')
         value = Math[method](+(valueMantissa + 'e' + (+valueExponent + precision)))
         const [roundedMantissa, shiftedExponent] = value.toExponential().split('e')
         return +(roundedMantissa + 'e' + (+shiftedExponent - precision))
     }
-    return Math[method](value)
+    return Math[method](value) // fallback if value and/or precision are not finite
 }
-// https://itnext.io/step-by-step-building-and-publishing-an-npm-typescript-package-44fe7164964c
